@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/service_pay_navigation">
+
+    <!-- Bill Payment -->
+    <fragment
+        android:id="@+id/navigation_bill_payments"
+        android:name="victor.com.br.myapplication.InputFragment"
+        android:label="Input"
+        tools:layout="@layout/fragment_input">
+        <action
+            android:id="@+id/action_input_to_navigation_bill_payments_Confirmation"
+            app:destination="@id/navigation_bill_payments_Confirmation" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_bill_payments_Confirmation"
+        android:name="victor.com.br.myapplication.ResultFragment"
+        android:label="Result"
+        tools:layout="@layout/fragment_result">
+
+        <argument
+            android:name="campo1"
+            app:argType="string" />
+        <argument
+            android:name="campo2"
+            app:argType="string" />
+    </fragment>
+
+    <!-- End Bill Payment -->
+
+</navigation>
